@@ -1,0 +1,10 @@
+@import './../node_modules/reset-css/reset.css';
+
+body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #E55934;
+}
