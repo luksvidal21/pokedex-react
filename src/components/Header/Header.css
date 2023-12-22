@@ -1,14 +1,16 @@
-h1 {
-    text-align: center;
-    font-size: 2rem;
-    color: blue;
+img {
+    max-width: 100%;
 }
 
 header {
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     justify-content: center;
-    padding: 20px;
     background-color: #FFCC03;
     margin-bottom: 20px;
+    position: fixed;
+    min-width: 100%;
+    z-index: 100;
+    top: 0;
+    height: 6rem;
 }

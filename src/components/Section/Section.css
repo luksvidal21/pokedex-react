@@ -1,6 +1,6 @@
 section {
     display: grid;
-    grid-template-columns: repeat(6, 300px);
+    grid-template-columns: repeat(4, 3fr);
     gap: 15px;
     margin: 10px 20px;
 }
