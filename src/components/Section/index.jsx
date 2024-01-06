@@ -7,8 +7,9 @@ export function Section () {
     const [offset, setOffset] = useState(0)
     const [limit, setLimit] = useState(10)
     const fetchData = async () => {
-        const response = await Queries.getPokemon(offset,limit).then(r=>r.json()).then(body => body.results);
+        const response = await Queries.getPokemon(offset,limit);
         setPokemons(response)
+        console.log(pokemons)
     }
 
     useEffect(()=>{
@@ -24,8 +25,7 @@ export function Section () {
             <section>
                 {pokemons.length > 0 && pokemons.map(pokemon => (
                     <CardBasico 
-                        key={pokemon.nome} 
-                        nome={pokemon.name}
+                        nome="poke"
                     />
                 ))}
             </section>
