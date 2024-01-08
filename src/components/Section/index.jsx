@@ -5,11 +5,10 @@ import './Section.css'
 export function Section () {
     const [pokemons, setPokemons] = useState([])
     const [offset, setOffset] = useState(0)
-    const [limit, setLimit] = useState(10)
+    const [limit, setLimit] = useState(12)
     const fetchData = async () => {
         const response = await Queries.getPokemon(offset,limit);
         setPokemons(response)
-        console.log(pokemons)
     }
 
     useEffect(()=>{
@@ -24,8 +23,11 @@ export function Section () {
         <>
             <section>
                 {pokemons.length > 0 && pokemons.map(pokemon => (
-                    <CardBasico 
-                        nome="poke"
+                    <CardBasico
+                        key={pokemon.id} 
+                        nome={pokemon.nome}
+                        cor={pokemon.cor}
+                        foto={pokemon.foto}
                     />
                 ))}
             </section>
