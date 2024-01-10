@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import CardBasico from "../Card"
+import CardPokemon from "../Card"
 import Queries from "./service"
 import './Section.css'
 export function Section () {
@@ -23,11 +23,12 @@ export function Section () {
         <>
             <section>
                 {pokemons.length > 0 && pokemons.map(pokemon => (
-                    <CardBasico
+                    <CardPokemon
                         key={pokemon.id} 
                         nome={pokemon.nome}
                         cor={pokemon.cor}
                         foto={pokemon.foto}
+                        tipo={pokemon.tipo}
                     />
                 ))}
             </section>
